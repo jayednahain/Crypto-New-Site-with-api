@@ -1,0 +1,1 @@
+web: gunicorn Crypto_currency_news_site.wsgi

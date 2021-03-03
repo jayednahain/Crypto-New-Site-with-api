@@ -16,8 +16,6 @@ price_raw_data = json.loads(api_request_price.content)
 
 
 
-
-
 image_dict = {
    'BTC':'https://images.theconversation.com/files/194266/original/file-20171113-27585-1gdvg8x.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip',
    'ETH':'https://i2.wp.com/asiatimes.com/wp-content/uploads/2018/12/Ethereum-e1545900837119.jpg?fit=1200%2C801&ssl=1',
@@ -60,6 +58,9 @@ def price_keys(request):
 def price_with_cards(request):
    return render(request, 'price_with_cards.html', {"price_data": price_raw_data,"photos":image_dict})
 
+def about_section(request):
+   return render(request,'about_section.html')
+
 
 '''def test_image(request):
    return render(request,'image_test.html',)'''
@@ -76,7 +77,7 @@ def price_search(request):
                                                    "photos": image_dict,
                                                    })
    else:
-      not_found = "Enter text in search box"
+      not_found = "Search coin name on search box "
       return render(request, 'price_search.html', {"warning":not_found})
 
 

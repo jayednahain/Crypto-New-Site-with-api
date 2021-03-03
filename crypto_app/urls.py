@@ -10,6 +10,7 @@ urlpatterns = [
    path('rawprice',views.raw_price_api,name='raw_price_api_link'),
    path('pricekeys',views.price_keys,name="price_keys_link"),
    path('pricecards',views.price_with_cards,name='price_card_link'),
-   path('searchprice',views.price_search,name='price_search_link')
+   path('searchprice',views.price_search,name='price_search_link'),
+   path('about_section',views.about_section,name="about_section_link")
 
 ]
