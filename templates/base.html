@@ -52,7 +52,7 @@
                 </ul>
                 <form class="d-flex" method="POST" action="{% url 'price_search_link' %}">
                     {% csrf_token %}
-                    <input class="form-control me-2" type="search" placeholder="Type Here" aria-label="Search" name="search_value">
+                    <input class="form-control me-2" type="search" placeholder="Type Coin name" aria-label="Search" name="search_value">
                     <button class=" btn btn-light" type="submit">Search</button>
                 </form>
             </div>
