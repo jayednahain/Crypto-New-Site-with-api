@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    {% for key,value in price_data.DISPLAY.items %}
+        {{ value.USD.keys }} <br>
+    {% endfor %}
+
+
+
+
+{% endblock content %}

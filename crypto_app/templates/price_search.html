@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <br>
+    <br>
+        {% if warning %}
+            {{ warning }}
+        {% else %}
+
+            {% if result_data.Response %}
+                <h1>Sorry "{{ key_data }}" doesnt exist</h1>
+            {% endif %}
+
+
+            {% for key,value in result_data.DISPLAY.items %}
+                <br>
+                <br>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        {% for im_key,im_value in photos.items %}
+                            {% if key == im_key %}
+                                <img class="card-img-top" src="{{ im_value }}" alt="Card image cap">
+                            {% endif %}
+                        {% endfor %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ key }}</h5>
+                            <p class="card-text">
+                                <strong>Name: </strong> {{ key }}<br>
+                                <strong>Price: </strong> {{ value.USD.PRICE }}<br>
+                                <strong>Daily High: </strong> {{ value.USD.HIGHDAY }}<br>
+                                <strong>Daily low: </strong> {{ value.USD.LOWDAY }}<br>
+                                <strong>MarketCap: </strong> {{ value.USD.PRICE }}<br>
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+{% endblock content %}

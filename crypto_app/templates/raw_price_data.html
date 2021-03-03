@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Direct api Json data</h1>
+    <br>
+    {{ price_data }}
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+    <h1>Display data</h1>
+    <br>
+    {{ price_data.DISPLAY.keys }}
+    <br>
+    {{ price_data.DISPLAY.items }}
+    <br>
+    <hr>
+
+    <h1>Raw data with formats</h1>
+    {{ price_data.RAW.keys }}
+    <br>
+    {{ price_data.RAW.items }}
+
+
+
+
+
+
+
+{% endblock content %}

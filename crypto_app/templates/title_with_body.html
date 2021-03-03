@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <ul>
+        {% for x in api_data.Data %}
+
+
+            <div class="jumbotron">
+	            <div class="col-sm-8 mx-auto">
+                    <h2>{{ x.title }}</h2>
+                    <p>{{ x.body }}</p>
+                </div>
+
+            </div>
+
+
+        {% endfor %}
+    </ul>
+{% endblock content %}

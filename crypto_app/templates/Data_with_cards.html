@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome note</h1>
+        <p class="lead">little description</p>
+
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+        <br/>
+            {% for x in api_data.Data %}
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ x.imageurl }}" class="card-img-top" alt="source">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ x.title }}</h5>
+                                <p class="card-text">{{ x.body }}</p>
+                                <a href="{{ x.url }}" class="btn btn-primary">Click for more</a>
+                            </div>
+                    </div>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock content %}
+
